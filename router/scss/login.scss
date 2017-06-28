@@ -1,0 +1,98 @@
+@import "./util.scss";
+@import "./variable.scss";
+#app {
+    #Login {overflow: hidden;
+        width: 100%;
+        height: 100%;
+        header {
+            &#loginHeader {
+                height: 0.44rem;
+                background: #fff;
+                @include flexbox();
+                border-bottom: 1px #CCCCCC solid;
+                .loginback {
+                    font-size: 0.28rem;
+                    @include flexbox();
+                    @include flex(1);
+                    height: 100%;
+                }
+                .logintitle {
+                    @include flexbox();
+                    @include flex(5);
+                    height: 100%;
+                    padding-right: 15%;
+                }
+            }
+        }
+        #loginContent {
+            width: 100%;
+            height: 100%;
+            @include flexbox(column);
+            justify-content: flex-start;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            .wel {
+                @include flexbox();
+                color: $activeColor;
+                font-size: 34px;
+                width: 100%;
+                height: 25%;
+            }
+            form {
+                width: 100%;
+                input {
+                    outline: none;
+                    border: none;
+                }
+                @include flexbox(column);
+                justify-content: space-between;
+                width: 100%;
+                height: 26%;
+                #username {
+                    text-indent: 15px;
+                    width: 88%;
+                    height: 32%;
+                    border-bottom: 1px #E5E5E5 solid;
+                }
+                #password {
+                    text-indent: 15px;
+                    width: 88%;
+                    height: 32%;
+                    border-bottom: 1px #E5E5E5 solid;
+                }
+                #loginbtn {
+                    font-size: 0.16rem;
+                    margin-top: 20px;
+                    width: 88%;
+                    height: 30%;
+                    background: $activeColor;
+                    border-radius: 10px;
+                    color: white;
+                }
+            }
+            .go {
+                @include flexbox();
+                justify-content: space-between;
+                width: 50%;
+                height: 8%;
+                p {
+                    &:nth-child(1) {
+                        a {
+                            text-decoration: none;
+                            display: block;
+                            @include flexbox();
+                            height: 100%;
+                            color: $activeColor;
+                        }
+                    }
+                    &:nth-child(2) {
+                        @include flexbox();
+                        height: 100%;
+                        color: #C8C7CC;
+                    }
+                }
+            }
+        }
+    }
+}

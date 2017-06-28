@@ -1,0 +1,145 @@
+@import "./util.scss";
+@import "./variable.scss";
+#app {
+    width: 100%;
+    height: 100%;
+    #Details {
+        width: 100%;
+        height: 100%;
+        @include flexbox(column);
+        header {
+            &#header {
+                border-bottom: 1px #f1f1f1 solid;
+                padding: 0 4%;
+                width: 100%;
+                height: 0.44rem;
+                background: $bgColor;
+                @include flexbox();
+                justify-content: flex-start;
+                p {
+                    &:nth-child(1) {
+                        font-size: 25px;
+                    }
+                    &:nth-child(2) {
+                        margin-left: 36%;
+                    }
+                }
+            }
+        }
+        #content {
+            overflow: auto;
+            background: #f7f7f7;
+            width: 100%;
+            @include flex();
+            .Dbanner {
+                background: #fff;
+                .swiper-wrapper {
+                    height: 100%;
+                    .swiper-slide {
+                        height: 100%;
+                    }
+                }
+            }
+            .detail_price {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0.05rem;
+                background: #fff;
+                margin-bottom: 0.1rem;
+                div {
+                    overflow: hidden;
+                    p {
+                        float: left;
+                    }
+                    &:nth-child(1) {
+                        font-size: 0.14rem;
+                        margin-bottom: 0.1rem;
+                    }
+                    &:nth-child(2) {
+                        font-size: 0.14rem;
+                        color: #F00;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 0.1rem;
+                        span {
+                            font-size: 0.22rem;
+                        }
+                        p:nth-child(2) {
+                            height: 0.15rem;
+                            line-height: 0.15rem;
+                            background: #f66;
+                            color: #fff;
+                            font-size: 12px;
+                            padding: 0 0.04rem;
+                            border-radius: 0.05rem;
+                            margin-left: 0.1rem;
+                        }
+                    }
+                    &:nth-child(3) {
+                        font-size: 0.14rem;
+                        color: #999;
+                        margin-bottom: 0.1rem;
+                        text-decoration: line-through;
+                    }
+                    &:nth-child(4) {
+                        font-size: 0.14rem;
+                        color: #999;
+                        display: flex;
+                        p {
+                            &:nth-child(2) {
+                                @include flex(1);
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .detail_para {
+                margin-bottom: 0.1rem;
+                padding: 0.05rem;
+                background: #fff;
+                h1 {
+                    font-size: 0.16rem;
+                    margin-bottom: 5px;
+                }
+                div {
+                    font-size: 0.14rem;
+                }
+            }
+             .detail_img{  background: #F1F1F1;
+                margin-bottom: 0.1rem;
+                padding: 0.05rem;
+                h1{background: #fff;
+                   font-size:0.16rem; 
+                   padding: 10px 0;
+                }
+                img{
+                    margin-bottom: 10px;
+                }                                                               
+            }  
+        }
+        #footer{
+            border-top: 1px #CCCCCC solid;
+            height: 0.5rem;
+            width: 100%;
+            background: #fff;
+            font-size: 18px;
+            @include flexbox();
+            div{height: 100%;
+                @include flexbox();
+                &:nth-child(1){
+                   width: 20%;
+                   border-right: 1px #ddd solid; 
+                }
+                 &:nth-child(2){
+                      width: 40%; 
+                }
+                 &:nth-child(3){
+                      width: 40%; 
+                      background: #56b065;
+                      color:#fff;
+                }
+            }
+        }
+    }
+}

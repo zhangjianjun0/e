@@ -1,0 +1,50 @@
+@import "./util.scss";
+@import "./variable.scss";
+#app {
+    width: 100%;
+    height: 100%;
+    #Kind {
+        width: 100%;
+        height: 100%;
+        @include flexbox(column);
+        header {
+            &#header {
+                border-bottom: 1px #f1f1f1 solid;
+                padding: 0 4%;
+                width: 100%;
+                height: 0.44rem;
+                background: $bgColor;
+                @include flexbox();
+                justify-content: flex-start;
+                p {&:nth-child(1) {
+                        font-size: 25px;
+                    }
+                    &:nth-child(2) {
+                        margin-left: 40%;
+                    }
+                }
+            }
+        }
+        #content {
+            overflow: auto;
+            background: #f7f7f7;
+            width: 100%;
+            @include flex();
+            @include flexbox();
+            #kindList{width: 20%;height: 100%;
+            div{ @include flexbox();
+                height:7% ;
+                &:nth-child(1){
+                    background: #fff;
+                    color:#56b065;
+                }
+            }
+         
+            }
+            #showKind{
+                background: #fff;width: 80%;height:100%;overflow: auto;
+            div{height: 100%;}
+            }
+        }
+    }
+}

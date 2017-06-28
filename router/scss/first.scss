@@ -1,0 +1,101 @@
+@import "./util.scss";
+@import "./variable.scss";
+#first {
+    width: 100%;
+    height: 100%;
+    .banner {background: #fff;
+        height: 29%;
+        .swiper-wrapper {
+            height: 100%;
+            .swiper-slide {
+                height: 100%;
+            }
+        }
+    }
+    .nav {background: #fff;
+        @include flexbox();
+        justify-content: space-around;
+        width: 100%;
+        height: 14%;
+        p {
+            a{text-decoration: none;
+            color: #5F5F5F;
+                @include flexbox(column);
+            i {
+                font-size: 26px
+            }}
+            
+            
+        }
+    }
+    .tit {background: #fff;
+        padding: 10px 0;
+        text-align: center;
+        span {
+            color: #56b065;
+        }
+    }
+    .goods {background: #fff;
+        @include flexbox();
+        width: 100%;
+        height: 1.95rem;
+        overflow: hidden;
+        .goodsL {
+            width: 40%;
+            height: 100%;
+            background: #fac991;
+            margin-right: 2%;
+            overflow: hidden;
+            @include flexbox(column);
+            justify-content: space-between;
+            p {padding-left: 10px;
+                font-size: 14px;
+                padding-top: 2px;
+                margin-bottom: 2px;
+                padding-right: 10px;
+                text-align: justify;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .goodsR {overflow: hidden;
+            width: 50%;
+            height: 100%;
+             @include flexbox(column);
+            justify-content: space-between;
+            div {width: 100%;
+                height: 49%;
+                overflow: hidden;
+                p{ padding-top: 2px;
+                    padding-left: 10px;
+                    
+                    margin-bottom: 2px;
+                }
+                img{
+                    width: 100%;
+                }
+                &:nth-child(1){margin-bottom:2%;
+                background: #faf2cd;}
+                &:nth-child(2){background: #90d1fb;}
+            }
+        }
+    }
+    .card{margin-bottom: 15px;background: #fff;
+        width: 100%;
+        height: 40%;
+
+        div{
+            width: 100%;
+            height: 75%;
+            overflow: hidden;
+        }
+        p{
+            font-size: 0.16rem;
+            padding-left: 14px;
+            padding-top: 10px;
+     
+        }
+    }
+}

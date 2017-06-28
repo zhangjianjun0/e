@@ -1,0 +1,108 @@
+@import "./util.scss";
+@import "./variable.scss";
+#app {
+    width: 100%;
+    height: 100%;
+    #Search {
+        width: 100%;
+        height: 100%;
+        @include flexbox(column);
+        header {
+            &#header {
+                border-bottom: 1px #f1f1f1 solid;
+                padding: 0 4%;
+                width: 100%;
+                height: 0.44rem;
+                background: $bgColor;
+                @include flexbox();
+                justify-content: space-between;
+                padding: 0 5%;
+                p {
+                    &:nth-child(1) {
+                        font-size: 25px;
+                    }
+                    &:nth-child(2) {
+                        @include flexbox();
+                        width: 75%;
+                        border-radius: 0.3rem;
+                        height: 0.3rem;
+                        background: #F1F1F1;
+                        i {
+                            width: 12%;
+                            height: 100%;
+                            font-size: 16px;
+                            @include flexbox();
+                            padding-top: 2%;
+                        }
+                        input {
+                            padding-top: 1%;
+                            outline: none;
+                            width: 80%;
+                            height: 100%;
+                            border: none;
+                            background: #F1F1F1;
+                        }
+                    }
+                    &:nth-child(3) {}
+                }
+            }
+        }
+        #content {
+            overflow: auto;
+            background: #f7f7f7;
+            width: 100%;
+            @include flex();
+            .inp {
+                @include flexbox(column);
+                align-items: flex-start;
+                p {
+                    width: 100%;
+                    padding-right: 5%;
+                    line-height: 0.44rem;
+                    justify-content: flex-start;
+                    background: #fff;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    height: 0.44rem;
+                    border-bottom: 1px #f1f1f1 solid;
+                    i {
+                        margin: 0 10px 0 5%;
+                    }
+                }
+            }
+            .p {
+                display: none;
+                @include flexbox();
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 0 8%;
+                div {
+                    margin: 10px 0;
+                    background: #fff;
+                    width: 1.66rem;
+                    height: 2.2rem;
+                    img {
+                        width: 1.66rem;
+                        height: 1.66rem;
+                    }
+                    p {
+                        margin-top: 5px;
+                        &:nth-child(2) {
+                            font-size: 0.10rem;
+                           white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            padding-left:5px;
+                            padding-right:10px;
+                        }
+                        &:nth-child(3) {
+                            color: $activeColor;
+                            padding-left:5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

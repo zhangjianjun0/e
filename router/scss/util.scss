@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+i {
+    font-style: normal;
+}
+
+body {user-select:none;
+    font-size: 16px;
+    color: #5F5F5F;
+   
+}
+
+@mixin flexbox($direction:row) {
+    display: -webkit-box; //老式弹性盒子
+    display: flex;
+    @if $direction==column {
+        -webkit-box-orient: vertical; //老式弹性盒子列
+        flex-direction: column;
+    }
+    -webkit-box-pack: center; //老式弹性盒子水平
+    -webkit-box-align: center; //老式弹性盒子垂直
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex($num:1) {
+    -webkit-box-flex: $num;
+    flex: $num;
+}
+
+@mixin moviebox() {
+    margin-top: 15px;
+    background: $bgColor;
+    width: 100%;
+    height: 2.5rem;
+    .title {
+        width: 100%;
+        @include flexbox();
+        padding: 0 15px;
+        justify-content: space-between;
+        height: 20%;
+        .moremovie {
+            color: $activeColor;
+        }
+    }
+    .swiper-container {
+        padding: 0 15px;
+        .swiper-slide {
+            width: 28%;
+            height: 2.2rem;
+            img {
+                width: 100%;
+                height: 1.4rem;
+            }
+            p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0.03rem 0;
+                font-size: 14px;
+            }
+        }
+    }
+}
